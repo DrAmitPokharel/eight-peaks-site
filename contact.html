@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Eight Peaks Engineering PLLC</title>
+<meta name="description" content="Get in touch with Eight Peaks Engineering PLLC to discuss your project.">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.jpg" alt="Eight Peaks Engineering logo">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-outline-dark">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow" style="color:#a9c2da;">Contact</span>
+    <h1>Let's talk about your project</h1>
+    <p>Send a message and we'll get back to you as soon as we can.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <div class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6 12 13 2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </div>
+          <h3>Email</h3>
+          <p><a href="mailto:dramitpokharel@gmail.com">dramitpokharel@gmail.com</a></p>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Response Time</h3>
+          <p>We typically respond within one to two business days.</p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <!--
+          IMPORTANT: replace YOUR_WEB3FORMS_ACCESS_KEY below with a real
+          access key from https://web3forms.com before this form will work.
+          See the README that came with this site for step-by-step instructions.
+        -->
+        <input type="hidden" name="access_key" value="cb33bdf2-918e-4818-83f9-d712c3bebb47">
+        <input type="hidden" name="subject" value="New message from Eight Peaks Engineering website">
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="company">Company (optional)</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <div class="form-status"></div>
+        <p class="form-note">By submitting, you agree to be contacted about your inquiry.</p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.jpg" alt="Eight Peaks Engineering logo" style="height:38px;">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Eight Peaks Engineering, PLLC. All rights reserved.</span>
+      <span><a href="mailto:dramitpokharel@gmail.com">dramitpokharel@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+</body>
+</html>
