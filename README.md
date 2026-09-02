@@ -4,34 +4,26 @@ A simple 3-page static site (Home, About, Contact) — no build tools, no
 dependencies, just HTML/CSS/JS. You can preview it right now by opening
 `index.html` in a browser.
 
-Two things need to be finished before this goes live:
+One thing left before this goes fully live:
 
-1. **Connect the contact form** (5 minutes)
-2. **Deploy it for free and point your domain at it** (15–20 minutes)
+1. **Deploy it for free and point your domain at it** (15–20 minutes)
 
----
+The contact form is already connected — `contact.html` has a live
+[Web3Forms](https://web3forms.com) access key tied to
+eightpeaksengineering@gmail.com, so submissions will email straight there
+once the site is deployed. Nothing to configure.
 
-## 1. Connect the contact form
+If you ever need to reconnect it (e.g. a new access key, or a different
+recipient email), go to https://web3forms.com, get the new key, and swap
+the value in this line near the top of the `<form>` in `contact.html`:
 
-The Contact page form uses [Web3Forms](https://web3forms.com) — a free
-service that emails you form submissions with no backend server needed.
-
-1. Go to https://web3forms.com and enter the email address that should
-   receive messages (eightpeaksengineering@gmail.com), then confirm it from the
-   email they send you. You'll get an **Access Key**.
-2. Open `contact.html`, find this line near the top of the `<form>`:
-
-   ```html
-   <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-   ```
-
-3. Replace `YOUR_WEB3FORMS_ACCESS_KEY` with the key you were given, save
-   the file, and re-deploy (see below). Free tier covers plenty of volume
-   for a company contact form.
+```html
+<input type="hidden" name="access_key" value="907ad3f4-d8ab-45d2-8ea5-8de51f716af1">
+```
 
 ---
 
-## 2. Deploy for free + connect eightpeaksengineering.com
+## Deploy for free + connect eightpeaksengineering.com
 
 Either option below is completely free, with no subscription, forever
 (within very generous limits a small company site will never hit).
