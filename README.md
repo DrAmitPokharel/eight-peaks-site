@@ -17,7 +17,7 @@ The Contact page form uses [Web3Forms](https://web3forms.com) — a free
 service that emails you form submissions with no backend server needed.
 
 1. Go to https://web3forms.com and enter the email address that should
-   receive messages (dramitpokharel@gmail.com), then confirm it from the
+   receive messages (eightpeaksengineering@gmail.com), then confirm it from the
    email they send you. You'll get an **Access Key**.
 2. Open `contact.html`, find this line near the top of the `<form>`:
 

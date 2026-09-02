@@ -1,3 +1,25 @@
+// Scroll-reveal animation for cards, sections, etc.
+document.addEventListener('DOMContentLoaded', function () {
+  var revealTargets = document.querySelectorAll('.reveal');
+  if (revealTargets.length && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal--visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    revealTargets.forEach(function (el) { observer.observe(el); });
+  } else {
+    // No IntersectionObserver support (or nothing to reveal) — just show everything
+    revealTargets.forEach(function (el) { el.classList.add('reveal--visible'); });
+  }
+});
+
 // Mobile nav toggle
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.querySelector('.nav-toggle');
