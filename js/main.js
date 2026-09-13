@@ -20,6 +20,29 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// Adjust the contact page for a ?topic= query param (e.g. links from
+// foundation-inspection.html use ?topic=foundation-inspection)
+document.addEventListener('DOMContentLoaded', function () {
+  var params = new URLSearchParams(window.location.search);
+  var topic = params.get('topic');
+  if (topic === 'foundation-inspection') {
+    var subjectField = document.querySelector('input[name="subject"]');
+    if (subjectField) {
+      subjectField.value = 'Foundation Inspection Request — Eight Peaks Engineering website';
+    }
+    var eyebrow = document.getElementById('contactEyebrow');
+    if (eyebrow) { eyebrow.textContent = 'Foundation Inspection'; }
+    var heading = document.getElementById('contactHeading');
+    if (heading) { heading.textContent = "Let's schedule your foundation inspection"; }
+    var lead = document.getElementById('contactLead');
+    if (lead) { lead.textContent = "Tell us the property address and what you're seeing, and we'll follow up to schedule an independent assessment."; }
+    var messageField = document.getElementById('message');
+    if (messageField) {
+      messageField.placeholder = "Property address, and what you're seeing (cracks, sticking doors, sloping floors, etc.)";
+    }
+  }
+});
+
 // Mobile nav toggle
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.querySelector('.nav-toggle');

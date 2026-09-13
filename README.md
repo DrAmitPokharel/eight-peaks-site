@@ -1,8 +1,8 @@
 # Eight Peaks Engineering — Website
 
-A simple 3-page static site (Home, About, Contact) — no build tools, no
-dependencies, just HTML/CSS/JS. You can preview it right now by opening
-`index.html` in a browser.
+A simple static site (Home, Foundation Inspection, About, Contact) — no
+build tools, no dependencies, just HTML/CSS/JS. You can preview it right
+now by opening `index.html` in a browser.
 
 One thing left before this goes fully live:
 
@@ -83,17 +83,35 @@ switching hosts.
 - **Text/content changes**: edit the relevant `.html` file directly, or
   ask me to make the change and re-send the files.
 - **New pages**: copy the structure of an existing page (header/footer)
-  and add a link to it in the nav menu in *all three* HTML files.
+  and add a link to it in the nav menu in *every* HTML file (and in
+  `sitemap.xml` if you want search engines to find it).
 - **Logo/branding**: swap `assets/logo.jpg` and the favicon files in
   `assets/` if the logo ever changes.
+
+## Local search / SEO
+
+- Every page has Open Graph tags and a canonical link for clean social
+  previews and search indexing.
+- `index.html` includes site-wide `ProfessionalService` structured data;
+  `foundation-inspection.html` includes narrower `Service` structured
+  data for that offering.
+- `sitemap.xml` and `robots.txt` are in the site root — once the domain
+  is live, submit the sitemap in
+  [Google Search Console](https://search.google.com/search-console).
+- Also set up a free **Google Business Profile**
+  (https://business.google.com) for Eight Peaks Engineering — this is
+  separate from the website but is one of the highest-impact free things
+  for showing up in local "foundation inspection near me" searches.
 
 ## What's inside
 
 ```
-index.html      Home page
-about.html      About page
-contact.html    Contact page (form + email)
-css/style.css   All styling
-js/main.js      Mobile nav + contact form submission logic
-assets/         Logo + favicons
+index.html                  Home page
+foundation-inspection.html  Foundation inspection landing page
+about.html                  About page
+contact.html                Contact page (form + email)
+css/style.css                All styling
+js/main.js                   Mobile nav, contact form submission, ?topic= handling
+sitemap.xml / robots.txt     Search-engine discovery files
+assets/                      Logo + favicons
 ```
