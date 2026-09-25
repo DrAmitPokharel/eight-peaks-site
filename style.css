@@ -357,25 +357,44 @@ section { padding: 80px 0; }
   margin-bottom: 2px;
 }
 
-/* ---------- Credentials strip ---------- */
+/* ---------- Credentials strip (horizontal auto-scroll) ---------- */
 .credentials-strip {
   background: var(--bg-alt);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 10px 0;
 }
-.credentials-strip .container {
-  padding: 10px 24px;
+.credentials-track {
+  display: flex;
+  width: max-content;
+  animation: credsScroll 24s linear infinite;
 }
-.credentials-strip p {
-  margin: 0;
-  text-align: center;
+.credentials-strip:hover .credentials-track {
+  animation-play-state: paused;
+}
+.credentials-set {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-right: 2.5em;
+}
+.credentials-set .cred-item {
   font-size: 0.82rem;
   letter-spacing: 0.01em;
   color: var(--slate);
+  white-space: nowrap;
 }
-.credentials-strip .sep {
+.credentials-set .sep {
   margin: 0 0.6em;
   color: var(--border);
+}
+@keyframes credsScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .credentials-track { animation: none; }
 }
 
 /* ---------- Promo banner ---------- */
